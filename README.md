@@ -12,8 +12,9 @@ Go to Release to get the last update for [`Turk Ransomware <3"`](https://github.
 
 ## Discribe
 
- * This Virus use to locking Windows Device. to show results in 
- [`VirusTotal <3"`](https://www.virustotal.com/gui/file/aaedef7bb5d71c7d5db9873af7da3bbb6d49b5da096b64daa07041c8159e094a/detection)
+ * This Virus use to locking Windows Device <3".
+ * To unlock Virus tap "delete" key <3".
+ * to show results in [`VirusTotal <3".`](https://www.virustotal.com/gui/file/aaedef7bb5d71c7d5db9873af7da3bbb6d49b5da096b64daa07041c8159e094a/detection)
 
 ## Screen From App
 
