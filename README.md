@@ -35,7 +35,7 @@ Go to Release to get the last update for [`Turk Ransomware <3"`](https://github.
 
 ## Run
  ```bash
- python3 Run.py
+ python3 "Turk Ransowm.py"
  ```
  ```
  pip install -r requirements.txt
