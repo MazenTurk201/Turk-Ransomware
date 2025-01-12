@@ -17,6 +17,8 @@ class Window(CTk):
         self.focus_force()
         block_key('Win')
         block_key('Alt')
+        block_key('Ctrl')
+        block_key('Esc')
         self.bind("<Delete>", self.secret_key)
         self.background_image = Image.open("Turk.jpg")
         self.bg_image = CTkImage(self.background_image, size=(1920, 1080))
