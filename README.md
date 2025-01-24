@@ -1,5 +1,5 @@
 <p align="center">
-<img src="https://i.postimg.cc/3J6Ngk7C/Turk.png">
+<img src="https://raw.githubusercontent.com/MazenTurk201/Turk-Ransomware/refs/heads/main/Turk.png">
 </p>
 
 # About
