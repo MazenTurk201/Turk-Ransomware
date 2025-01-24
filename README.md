@@ -1,5 +1,5 @@
 <p align="center">
-<img src="https://i.postimg.cc/3J6Ngk7C/Turk.png">
+<img src="https://postimg.cc/ppfPvXmp">
 </p>
 
 # About
