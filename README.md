@@ -19,7 +19,7 @@ Go to Release to get the last update for [`Turk Ransomware <3"`](https://github.
 ## Screen From App
 
 <p align="center">
-<img src="https://raw.githubusercontent.com/MazenTurk201/Turk-Ransomware/refs/heads/main/screen%20from%20app.jpg">
+<img src="https://raw.githubusercontent.com/MazenTurk201/Trash-Images-Storage/refs/heads/main/screen%20from%20app.jpg">
 </p>
 
 ## Download Source Code
